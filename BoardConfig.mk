@@ -140,9 +140,8 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 
 # CM Hardware
 BOARD_HARDWARE_CLASS += \
-    hardware/cyanogen/cmhw \
-    $(DEVICE_PATH)/cmhw
-BOARD_USES_CYANOGEN_HARDWARE := true
+    hardware/cyanogen/mkhw \
+    $(DEVICE_PATH)/mkhw
 TARGET_TAP_TO_WAKE_NODE :=  "/proc/touchpanel/double_tap_enable"
 
 # CNE and DPM
