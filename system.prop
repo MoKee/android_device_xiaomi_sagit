@@ -83,6 +83,9 @@ bt.max.hfpclient.connections=1
 #force disable Bluetooth AAC by default
 persist.bt.a2dp.aac_disable=true
 
+persist.bt.a2dp.aptx_disable=false
+persist.bt.a2dp.aptx_hd_disable=false
+
 # System property for cabl
 ro.qualcomm.cabl=0
 
