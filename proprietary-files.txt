@@ -867,6 +867,9 @@ vendor/lib/libqti-perfd-client.so
 vendor/lib/libqti-util.so
 vendor/lib/libqti-utils.so
 
+# powerhint
+etc/powerhint.xml
+
 # Peripheral manager
 bin/pm-proxy
 bin/pm-service
