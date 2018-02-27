@@ -193,9 +193,9 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 # Init
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 
-# Lineage Hardware
+# MK Hardware
 BOARD_HARDWARE_CLASS += \
-    $(DEVICE_PATH)/lineagehw
+    $(DEVICE_PATH)/mkhw
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
