@@ -185,3 +185,6 @@ ro.wlan.chip=39xx
 ro.wlan.mimo=1
 ro.wlan.vendor=qcom
 wifi.interface=wlan0
+
+# maintainer
+ro.mk.maintainer=wood
