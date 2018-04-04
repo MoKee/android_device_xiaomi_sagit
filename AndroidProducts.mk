@@ -16,3 +16,8 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/mk_sagit.mk
+
+COMMON_LUNCH_CHOICES := \
+    mokee_sagit-user \
+    mokee_sagit-userdebug \
+    mokee_sagit-eng
