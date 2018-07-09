@@ -6,6 +6,5 @@
   {
     "repository": "android_vendor_xiaomi_sagit",
     "target_path": "vendor/xiaomi/sagit"
-   }
   }
 ]
