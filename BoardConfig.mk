@@ -29,8 +29,8 @@ TARGET_KERNEL_CONFIG := sagit_defconfig
 TARGET_OTA_ASSERT_DEVICE := sagit
 
 # MK Hardware
-BOARD_HARDWARE_CLASS += \
-    $(DEVICE_PATH)/mkhw
+JAVA_SOURCE_OVERLAYS += \
+    org.mokee.hardware|$(DEVICE_PATH)/mkhw|**/*.java
 
 # SELinux
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
