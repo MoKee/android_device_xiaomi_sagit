@@ -28,10 +28,6 @@ TARGET_KERNEL_CONFIG := sagit_defconfig
 # Assert
 TARGET_OTA_ASSERT_DEVICE := sagit
 
-# MK Hardware
-JAVA_SOURCE_OVERLAYS += \
-    org.mokee.hardware|$(DEVICE_PATH)/mkhw|**/*.java
-
 # SELinux
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
