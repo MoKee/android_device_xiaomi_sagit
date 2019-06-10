@@ -14,8 +14,8 @@
 # limitations under the License.
 #
 
-# Inherit from msm8998-common
-include device/xiaomi/msm8998-common/BoardConfigCommon.mk
+# Inherit from msm8998-sagit
+include device/xiaomi/msm8998-sagit/BoardConfigCommon.mk
 
 DEVICE_PATH := device/xiaomi/sagit
 

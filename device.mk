@@ -19,8 +19,8 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-mokee
 
-# Inherit from msm8998-common
-$(call inherit-product, device/xiaomi/msm8998-common/msm8998.mk)
+# Inherit from msm8998-sagit
+$(call inherit-product, device/xiaomi/msm8998-sagit/msm8998.mk)
 
 # Permissions
 PRODUCT_COPY_FILES += \

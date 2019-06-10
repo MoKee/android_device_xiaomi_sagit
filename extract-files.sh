@@ -18,7 +18,7 @@
 set -e
 
 export DEVICE=sagit
-export DEVICE_COMMON=msm8998-common
+export DEVICE_COMMON=msm8998-sagit
 export VENDOR=xiaomi
 
 ./../../$VENDOR/$DEVICE_COMMON/extract-files.sh $@
