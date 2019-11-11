@@ -49,7 +49,7 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
 
-# Lineage hardware
+# MK hardware
 PRODUCT_PACKAGES += \
     vendor.mokee.touch@1.0-service.sagit
 
