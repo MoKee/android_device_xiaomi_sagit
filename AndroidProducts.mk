@@ -15,7 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/mk_sagit.mk
+    $(LOCAL_DIR)/mokee_sagit.mk
 
 COMMON_LUNCH_CHOICES := \
     mokee_sagit-user \
