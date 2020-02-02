@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "vendor.lineage.touch@1.0-service.sagit"
+#define LOG_TAG "vendor.mokee.touch@1.0-service.sagit"
 
 #include <android-base/logging.h>
 #include <hidl/HidlTransportSupport.h>
@@ -27,8 +27,8 @@ using android::status_t;
 using android::hardware::configureRpcThreadpool;
 using android::hardware::joinRpcThreadpool;
 
-using ::vendor::lineage::touch::V1_0::IKeyDisabler;
-using ::vendor::lineage::touch::V1_0::implementation::KeyDisabler;
+using ::vendor::mokee::touch::V1_0::IKeyDisabler;
+using ::vendor::mokee::touch::V1_0::implementation::KeyDisabler;
 
 int main() {
     sp<IKeyDisabler> keyDisabler;
