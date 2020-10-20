@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The LineageOS Project
+ * Copyright (C) 2018-2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,28 +16,65 @@
 
 package org.mokee.settings.device;
 
-public abstract class SwitchPreferenceBackend {
-    protected Boolean mDefaultValue;
-    protected Boolean mValue;
+import org.mokee.internal.util.FileUtils;
 
-    public SwitchPreferenceBackend(Boolean defaultValue) {
-        mDefaultValue = defaultValue;
-        mValue = defaultValue;
+public class SwitchPreferenceBackend {
+
+    private String[] mPaths;
+    private Boolean mValid;
+
+    public SwitchPreferenceBackend(String[] paths) {
+        mPaths = paths;
+        updateValidity();
+    }
+
+    public SwitchPreferenceBackend(String path) {
+        this(new String[]{path});
+    }
+
+    public void setValue(Boolean value) {
+        for (String path : mPaths) {
+            if (!FileUtils.isFileWritable(path)) {
+                continue;
+            }
+
+            FileUtils.writeLine(path, value ? "1" : "0");
+        }
     }
 
     public Boolean getValue() {
-        return mValue;
+        Boolean value = false;
+        for (String path : mPaths) {
+            if (!FileUtils.isFileReadable(path)) {
+                continue;
+            }
+
+            if (Integer.parseInt(FileUtils.readOneLine(path)) == 1) {
+                value = true;
+            }
+        }
+        return value;
     }
 
-    public Boolean getDefaultValue() {
-        return mDefaultValue;
+    public Boolean isValid() {
+        return mValid;
     }
 
-    public void setDefaultValue() {
-        setValue(mDefaultValue);
+    private void updateValidity() {
+        Boolean valid = false;
+
+        /*
+         * Only one path might be available on a specific device,
+         * but we need to try multiple to handle multiple kernel drivers.
+         * Cache the validity to avoid slow fragment rendering times.
+         */
+        for (String path : mPaths) {
+            if (FileUtils.isFileReadable(path) && FileUtils.isFileWritable(path)) {
+                valid = true;
+                break;
+            }
+        }
+
+        mValid = valid;
     }
-
-    public abstract void setValue(Boolean value);
-
-    public abstract Boolean isValid();
 }
