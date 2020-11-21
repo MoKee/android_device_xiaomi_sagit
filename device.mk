@@ -22,6 +22,9 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-mokee
 
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-mokee/mokee-sdk
+
 # Inherit from msm8998-common
 $(call inherit-product, device/xiaomi/msm8998-common/msm8998.mk)
 
