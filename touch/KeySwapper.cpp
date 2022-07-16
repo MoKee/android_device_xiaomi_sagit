@@ -21,7 +21,7 @@
 #include "KeySwapper.h"
 
 namespace vendor {
-namespace lineage {
+namespace mokee {
 namespace touch {
 namespace V1_0 {
 namespace implementation {
@@ -32,7 +32,7 @@ KeySwapper::KeySwapper() {
     mHasKeySwapper = !access(kControlPath, F_OK);
 }
 
-// Methods from ::vendor::lineage::touch::V1_0::IKeySwapper follow.
+// Methods from ::vendor::mokee::touch::V1_0::IKeySwapper follow.
 Return<bool> KeySwapper::isEnabled() {
     std::string buf;
 
@@ -60,5 +60,5 @@ Return<bool> KeySwapper::setEnabled(bool enabled) {
 }  // namespace implementation
 }  // namespace V1_0
 }  // namespace touch
-}  // namespace lineage
+}  // namespace mokee
 }  // namespace vendor

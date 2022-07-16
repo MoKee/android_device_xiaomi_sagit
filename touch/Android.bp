@@ -13,9 +13,9 @@
 // limitations under the License.
 
 cc_binary {
-    name: "vendor.lineage.touch@1.0-service.sagit",
-    vintf_fragments: ["vendor.lineage.touch@1.0-service.sagit.xml"],
-    init_rc: ["vendor.lineage.touch@1.0-service.sagit.rc"],
+    name: "vendor.mokee.touch@1.0-service.sagit",
+    vintf_fragments: ["vendor.mokee.touch@1.0-service.sagit.xml"],
+    init_rc: ["vendor.mokee.touch@1.0-service.sagit.rc"],
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     vendor: true,
@@ -28,6 +28,6 @@ cc_binary {
         "libbase",
         "libhidlbase",
         "libutils",
-        "vendor.lineage.touch@1.0",
+        "vendor.mokee.touch@1.0",
     ],
 }
